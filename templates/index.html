@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <head>
+        <title>Example Flask Web-App</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id = "formDiv">
+                <form enctype="multipart/form-data" method="POST" onsubmit="return isInput();" action="/process" >
+                    <p>Enter Name Here</p>
+                    <textarea name="storyText" id="storyText"></textarea>
+                    <input type="submit" value="Submit"/>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            function isInput(){
+                let textInput = document.getElementById('storyText').value;
+
+                if (textInput == ""){
+                    alert("Enter your name to continue");
+                    return false;
+                }
+
+                return true;
+            }
+        </script>
+    </body>
+</html> 
+ 
